@@ -190,12 +190,14 @@ public class App {
         // input your solution here
         int rever=0;
         Scanner input1= new Scanner(System.in);
-        int number = input1.nextInt();
         System.out.print("Number: ");
-        for( ;number != 0; number=number/10)
+        int number = input1.nextInt();
+
+        while(number != 0)
         {
             int uebrig = number % 10;
             rever = rever * 10 + uebrig;
+            number= number/10;
         }
         System.out.println(rever);
     }
